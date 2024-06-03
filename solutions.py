@@ -14,6 +14,11 @@ def is_sweltering():
       :returns: True if the temperature is over 90, False otherwise.
     """
     # write your code for this function below this line.
+    current_temperature = int(input("What is the current temperature, in Fahrenheit? "))
+    if current_temperature > 90:
+        return True
+    else: 
+        return False
 
 
 def is_warm():
@@ -25,6 +30,11 @@ def is_warm():
       :returns: True if the temperature is between 75 and 87, inclusive, False otherwise.
     """
     # write your code for this function below this line.
+    current_temperature = int(input("What is the current temperature, in Fahrenheit? "))
+    if current_temperature <= 87 and current_temperature >= 75:
+        return True
+    else:
+        return False
 
 
 def is_humid():
@@ -36,6 +46,11 @@ def is_humid():
       :returns: True if it is humid today, False otherwise.
     """
     # write your code for this function below this line.
+    user_response = input("Is it currently humid? ")
+    if user_response == "yes":
+        return True
+    else:
+        return False
 
 
 def is_inclement():
@@ -47,6 +62,11 @@ def is_inclement():
       :returns: True if it is raining, snowing, or sleeting today, False otherwise.
     """
     # write your code for this function below this line.
+    weather_forecast = input("What is the weather forecast today? ")
+    if weather_forecast in ["rain","snow","sleet"]:
+        return True
+    else:
+        return False
 
 
 def is_typical_new_york_summer():
@@ -60,6 +80,12 @@ def is_typical_new_york_summer():
       :returns: True if the temperature is over 90 and it is humid, False otherwise.
     """
     # write your code for this function below this line.
+    is_it_sweltering = is_sweltering()
+    is_it_humid = is_humid()
+    if is_it_sweltering is True and is_it_humid is True:
+        return True
+    else:
+        return False
 
 
 def is_cool_and_nice():
@@ -72,3 +98,8 @@ def is_cool_and_nice():
       :returns: True if the weather is cool and nice today, False otherwise.
     """
     # write your code for this function below this line.
+    x = [is_sweltering(), is_warm(), is_humid(), is_inclement()]
+    if x.count(False) == 4:
+        return True
+    else:
+        return False
