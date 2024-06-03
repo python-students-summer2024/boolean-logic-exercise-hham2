@@ -31,7 +31,7 @@ def is_warm():
     """
     # write your code for this function below this line.
     current_temperature = int(input("What is the current temperature, in Fahrenheit? "))
-    if current_temperature <= 87 and current_temperature >= 75:
+    if 75 <= current_temperature <= 87:
         return True
     else:
         return False
